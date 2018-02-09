@@ -51,8 +51,10 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="BinarySearcTreeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HeapTest.cs" />
+    <Compile Include="ListTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

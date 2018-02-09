@@ -4,31 +4,8 @@ using DataStructure;
 namespace DataStructureTest
 {
     [TestClass]
-    public class UnitTestTree
+    public class HeapTest
     {
-        [TestMethod]
-        public void SimpleHeightTest()
-        {
-            BinarySearchTree tree = new BinarySearchTree(8);
-            Assert.AreEqual(0, tree.Height);
-        }
-
-        [TestMethod]
-        public void ComplexHeightTest()
-        {
-            BinarySearchTree tree = new BinarySearchTree(8);
-            tree.Add(5);
-            tree.Add(1);
-            tree.Add(10);
-            tree.Add(11);
-            tree.Add(9);
-            Assert.AreEqual(2, tree.Height);
-        }
-    }
-    [TestClass]
-    public class UnitTestHeap
-    {
-
         [TestMethod]
         public void SimpleHeapTest()
         {
@@ -97,42 +74,6 @@ namespace DataStructureTest
             heap.Push(23);
             Assert.AreEqual(0, heap.Pop());
             Assert.AreEqual(1, heap.Pop());
-        }
-    }
-
-    [TestClass]
-    public class UnitTestList
-    {
-        [TestMethod]
-        public void ComplexListTest()
-        {
-            MyList<int> list = new MyList<int>();
-            list.Add(5);
-            list.Add(9);
-            list.Remove(1);
-            Assert.AreEqual(5, list[0]);
-            list.Add(2);
-            list.Add(3);
-            list[-1] = 22;
-            Assert.AreEqual(22, list[-1]);
-            Assert.AreEqual(5, list[-3]);
-            Assert.AreEqual(3, list.Length);
-            int[] moreNumb = { 6, 8, 66, 34, 333, 987, 77, 20, 88 };
-            list.AddRange(moreNumb);
-            Assert.AreEqual(12, list.Length);
-            Assert.AreEqual(88, list[-1]);
-            Assert.AreEqual(20, list[-2]);
-            Assert.AreEqual(true, list.Contains(333));
-            Assert.AreEqual(false, list.Contains(1234));
-            list.RemoveAll(88);
-            Assert.AreEqual(20, list[-1]);
-            Assert.AreEqual(11, list.Length);
-            int[] fives = { 5, 5, 5, 5, 5 };
-            list.AddRange(fives);
-            Assert.AreEqual(16, list.Length);
-            list.RemoveAll(5);
-            Assert.AreEqual(10, list.Length);
-            Assert.AreEqual(77, list[-2]);
         }
     }
 }
